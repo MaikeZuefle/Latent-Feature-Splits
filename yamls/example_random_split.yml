@@ -1,0 +1,22 @@
+classifier:
+
+  embeddings:
+    embeddings: "bert-base-cased"           # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+    tokenizer: "bert-base-cased"            # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+
+  model:
+  
+    epochs: 10                                              # number of epochs
+    batch_size: 4                                           # batch size
+    early_stopping: 10                                      # early stopping after epochs/2
+    random_seed: 42                                         # seed for initialisation of parameters
+
+    destination_path: "results/random/hatexplain/bert"      # path to store parameters and results
+    
+  data:
+    path: "data/hatexplain"                                 # path to data folder          
+    train_file: "train_test.csv"                            # path to data csv 
+    split_seed: 22                                          # seed for splitting training data into train dev and test
+
+
+ 

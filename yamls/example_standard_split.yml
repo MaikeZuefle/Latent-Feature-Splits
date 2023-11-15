@@ -1,0 +1,23 @@
+classifier:
+
+  embeddings:
+    embeddings: "bert-base-cased"           # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+    tokenizer: "bert-base-cased"            # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+
+  model:
+  
+    epochs: 10                                              # number of epochs
+    batch_size: 4                                           # batch size
+    early_stopping: 10                                      # early stopping after epochs/2
+    random_seed: 42                                         # seed for initialisation of parameters
+
+    destination_path: "results/standard/hatexplain/bert"    # path to store parameters and results (standard split only avaible for HateXplain)
+    
+  data:
+    path: "data/hatexplain/standard"                        # path to data folder
+    train_file: "train_standard.csv"                        # path to training data csv
+    dev_file: "dev_standard.csv"                            # path to validation data csv
+    test_file: "test_standard.csv"                          # path to test data csv 
+
+
+ 

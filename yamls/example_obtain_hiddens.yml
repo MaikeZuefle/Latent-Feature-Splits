@@ -1,0 +1,25 @@
+classifier:
+
+  embeddings:
+    embeddings: "bert-base-cased"           # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+    tokenizer: "bert-base-cased"            # "bert-base-cased", "prajjwal1/bert-medium", "GroNLP/hateBERT" or "roberta-base"
+
+  model:
+  
+    epochs: 10                                              # number of epochs
+    batch_size: 4                                           # batch size
+    early_stopping: 10                                      # early stopping after epochs/2
+    random_seed: 42                                         # seed for initialisation of parameters
+    save_hiddens: True                                      # whether hidden representations should be stored (to be later used for clustering)
+    # bottleneck: 10                                        # dimension of bottleneck used when obtaining the hidden representations, default: no bottleneck
+
+    destination_path: "results/get_hiddens/hatexplain/bert"     # path to store parameters and results
+    
+  data:
+    path: "data/hatexplain"                        # path to data folder
+    train_file: "train_test.csv"                            # path to training data csv
+    dev_file: "dev.csv"                                     # path to validation data csv
+    test_file: "train_test.csv"                             # path to training data csv (needs to be the same as train_file when obtaining hidden repr.)
+
+
+ 
